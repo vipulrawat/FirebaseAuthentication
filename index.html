@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-Up/Login Form</title>
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://use.fontawesome.com/dc2744530a.js"></script>
+</head>
+<body>
+  <div class="form">
+      <!--tab-group starts-->
+      <ul class="tab-group" id="tabs">
+        <li class="tab active"><a href="#signup">Sign up</a></li>
+        <li class="tab"><a href="#login">Sign In</a></li>
+      </ul>
+      <!--tab-group ends-->
+      <div class="tab-content" id="authpage">
+      <!--SIGN UP PAGE STARTS-->
+        <div id="signup">
+          <h1>Sign up for free</h1>
+          <form>
+            <div class="email">
+              <input type="email" id="email1" placeholder="
+              Enter your Email" required>
+            </div>
+            <div class="password">
+                <input type="password" id="pass1" placeholder="
+                Set A Password" required>
+            </div>
+            <button type="submit" id="registerbtn" class="button button-block"/>Get Started</button>
+          </form>
+        </div>
+        <!--SIGN UP PAGE ENDS-->
+
+        <!--LOGIN PAGE STARTS-->
+        <div id="login">
+          <h1>Welcome Back!</h1>
+          <form>
+            <div class="errorclass hide" id="error"></div>
+            <div class="email">
+              <input type="email" id="email2" placeholder="
+              Enter your Email" required>
+            </div>
+            <div class="password">
+                <input type="password" id="pass2" placeholder="
+                Set A Password" required>
+            </div>
+            <button id="loginbtn" class="button button-block"/>Log in</button>
+
+
+          </form>
+          <button id="googlebtn" class="button-block"/>Log in using <i class="fa fa-google-plus"></i></button>
+          <button id="facebookbtn" class="button-block"/>Log in using <i class="fa fa-facebook"></i></button>
+        </div>
+        <!--LOGIN PAGE ENDS-->
+
+      </div>
+      <!--LOGGED IN PAGE STARTS-->
+
+      <div id="user" class="hide">
+        <h1>Welcome to the dashbord</h1>
+        <h3 id="status"></h3>
+        <form>
+          <div class="messages">
+            <p>You have <i>12 </i>unread messages</p>
+          </div>
+          <div class="password">
+              <p>You have <i>199 </i>unread emails</p>
+          </div>
+          <button id="logoutbtn" class="button button-block"/>Log out</button>
+        </form>
+      </div>
+    </div>
+
+      <!--LOGGED IN PAGE ENDS-->
+  </div>
+  <!--script starts here-->
+  <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="src.js"></script>
+  <script src="app.js"></script>
+
+  <!--script ends here-->
+</body>
+</html>
